@@ -3,14 +3,14 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "~> 5.0"
     }
   }
 }
 # Provider Block
 provider "aws" {
-  region  = "us-west-1"
-  profile = "Kenmak"
+  region  = "us-east-1"
+  profile = "chiomamak"
 }
 
 data "terraform_remote_state" "network" {
@@ -18,7 +18,7 @@ data "terraform_remote_state" "network" {
   config = {
     bucket = "my-terraformstate-landmark-buc"
     key    = "terraform/terraform.tfstate"
-    region = "us-west-1"
+    region = "us-east-1"
   }
 }
 
