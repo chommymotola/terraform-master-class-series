@@ -1,7 +1,7 @@
 resource "aws_instance" "ec2-prod" {
   ami               = data.aws_ami.ami.id
   instance_type     = "t2.micro"
-  availability_zone = "us-east-2b"
+  availability_zone = "us-east-1b"
   key_name          = aws_key_pair.ssh.key_name
   vpc_security_group_ids = [
   aws_security_group.prov_fw.id]
