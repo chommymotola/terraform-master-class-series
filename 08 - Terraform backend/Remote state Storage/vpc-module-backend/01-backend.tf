@@ -3,22 +3,23 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "~> 5.0"
     }
   }
 
 
   backend "s3" {
-    bucket         = "my-terraformstate-landmark-buc"
-    key            = "terraform/terraform.tfstate"
+    bucket         = "bootcamp36-50-chioma"
+    key            = "vpc/terraform.tfstate"
     dynamodb_table = "terraform-lock"
 
-    region = "us-west-1"
+    region = "us-east-1"
 
   }
 }
 
-/*resource "aws_s3_bucket" "my_bucket" {
+/*
+resource "aws_s3_bucket" "my_bucket" {
   bucket = "my-terraformstate-landmark-buc"
   acl    = "private"
 
@@ -30,8 +31,10 @@ terraform {
     Name        = "My terraform-bucket"
     Environment = "Dev"
   }
-}*/
+}
+*/
 
+/*
 resource "aws_dynamodb_table" "tf_lock" {
   name           = "terraform-lock"
   hash_key       = "LockID"
@@ -45,9 +48,9 @@ resource "aws_dynamodb_table" "tf_lock" {
     Name = "Terraform Lock Table"
   }
 }
+*/
 
 # Provider Block
 provider "aws" {
-  region  = "us-west-1"
-  profile = "Kenmak"
+  region  = "us-east-1"
 }
