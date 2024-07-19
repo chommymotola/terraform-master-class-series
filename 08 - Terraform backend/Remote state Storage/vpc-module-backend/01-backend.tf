@@ -52,5 +52,5 @@ resource "aws_dynamodb_table" "tf_lock" {
 
 # Provider Block
 provider "aws" {
-  region  = "us-east-1"
+  region  = var.aws_region
 }
