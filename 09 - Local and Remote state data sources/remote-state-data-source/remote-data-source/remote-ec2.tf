@@ -16,8 +16,8 @@ provider "aws" {
 data "terraform_remote_state" "network" {
   backend = "s3"
   config = {
-    bucket = "my-terraformstate-landmark-buc"
-    key    = "terraform/terraform.tfstate"
+    bucket = "bootcamp36-50-chioma"
+    key    = "vpc/terraform.tfstate"
     region = "us-east-1"
   }
 }
