@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     bucket = "my-terraformstate-landmark-buc"
     key    = "terraform/terraform.tfstate"
-    #dynamodb_table = "terraform-lock"
+    dynamodb_table = "terraform-lock"
     region = "us-east-1"
 
   }
