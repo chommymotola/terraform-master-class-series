@@ -1,6 +1,6 @@
 variable "name" {
   type    = string
-  default = "KEN"
+  default = "CHIOMA"
 }
 
 variable "versioning" {
@@ -15,7 +15,7 @@ variable "acl" {
 
 variable "region" {
   type    = string
-  default = "us-west-2"
+  default = "us-east-1"
 }
 
 variable "create_vpc" {
