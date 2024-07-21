@@ -11,7 +11,7 @@
        secret_key = "my-secret-key"
     }
 ```
-- **Environment variables**
+- **Environment variables**  #preferable in a working environment
 ```
      $ export AWS_ACCESS_KEY_ID="accesskey"
      $ export AWS_SECRET_ACCESS_KEY="secretkey"
