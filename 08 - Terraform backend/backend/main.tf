@@ -1,7 +1,6 @@
 #1. S3 bucket
 resource "aws_s3_bucket" "backend" {
   count = var.create_vpc ? 1 : 0
-
   bucket = "lower("bootcamp32-${random_integer.s3.result}-${var.name}")
 
   tags = {
